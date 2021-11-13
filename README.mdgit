@@ -1,0 +1,1 @@
+"# mmn-assignment-ausstellung"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/davidplmu/mmn-assignment-ausstellung.gitgit push -u origin main

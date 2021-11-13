@@ -1,0 +1,22 @@
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+header {
+  background-color: rgb(10, 17, 32);
+  color: antiquewhite;
+  padding: 10px;
+}
+
+#body {
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+footer {
+  background-color: rgb(12, 29, 71);
+  color: antiquewhite;
+
+  padding: 10px;
+  min-height: 60px;
+}
