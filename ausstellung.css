@@ -1,22 +1,85 @@
 body {
-  font-family: "Open Sans", sans-serif !important;
+    font-family: "Open Sans", sans-serif !important;
 }
 
-header {
-  background-color: rgb(10, 17, 32);
-  color: antiquewhite;
-  padding: 10px;
-}
 
-#body {
-  padding: 10px;
-  padding-bottom: 60px;
-}
 
 footer {
-  background-color: rgb(12, 29, 71);
-  color: antiquewhite;
-
-  padding: 10px;
-  min-height: 60px;
+    background-color: rgb(12, 29, 71);
+    color: antiquewhite;
+    padding: 10px;
+    min-height: 60px;
+    
 }
+
+/*
+Adjusts the hight of the images to be consistent regardless of the resolution
+50vh = the image is set to 50% of the viewport height 
+*/
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 50vh;
+}
+
+.card{
+    width: 18rem;
+    min-height: 310px;
+    max-height: 65vh; 
+}
+
+
+.card-img-top{
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    
+  }
+
+  .card-img-top:hover{
+    filter: brightness(0.7);    
+  }
+
+.bg-light2{
+  background-color: rgb(255, 246, 234);
+}
+
+.text-link{
+  color: rgb(245, 179, 94);
+}
+.text-link:hover{
+  filter: brightness(0.8);    
+}
+
+.text-like{
+  color: rgba(0, 126, 0, 0.479);
+}
+
+.text-dislike{
+color: darkred;
+}
+
+.download-icon {
+  background-image: url('./assets/icons/download-svgrepo-com.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-right: 25px;
+}
+
+.view-icon {
+  background-image: url('./assets/icons/view-svgrepo-com.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-right: 25px;
+}
+
+.like-icon {
+  background-image: url('./assets/icons/like-svgrepo-com.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-right: 25px;
+}
+
+
