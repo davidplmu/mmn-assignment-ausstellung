@@ -3,20 +3,25 @@ body {
 }
 
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 footer {
-    background-color: rgb(12, 29, 71);
-    color: antiquewhite;
+    background-color:#2F3E46;
+    color: #CAD2C5;
     padding: 10px;
     min-height: 60px;
     
 }
 
+
+
 /*
 Adjusts the hight of the images to be consistent regardless of the resolution
 50vh = the image is set to 50% of the viewport height 
 */
-
 .carousel-item img {
     object-fit: cover;
     object-position: center;
@@ -42,44 +47,99 @@ Adjusts the hight of the images to be consistent regardless of the resolution
     filter: brightness(0.7);    
   }
 
-.bg-light2{
-  background-color: rgb(255, 246, 234);
-}
 
 .text-link{
-  color: rgb(245, 179, 94);
-}
-.text-link:hover{
-  filter: brightness(0.8);    
+  color: #52796F;
 }
 
-.text-like{
-  color: rgba(0, 126, 0, 0.479);
+
+.hover-darken-1:hover{
+  filter: brightness(0.7);    
+
 }
 
-.text-dislike{
-color: darkred;
+.hover-darken-2:hover{
+  filter: brightness(0.4);    
+
+}
+
+.btn-color-1{
+  color: #fff;
+  background-color: #157347;
+  border-color: #146c43;
+}
+
+.img-inv{
+  filter: invert();
+}
+
+
+
+.text-light-green{
+  color: #CAD2C5;
+}
+
+.text-light-green-2{
+  color: #84A98C;
+}
+
+.text-normal-green{
+  color: #52796F;
+}
+
+.text-dark-green{
+  color: #354F52;
+}
+
+.text-dark-green-2{
+  color: #2F3E46;
+}
+
+.bg-dark-green{
+  background-color: #202a30 !important;
+}
+
+.bg-light-green{
+    background-color: #CAD2C5;
+}
+  
+.bg-light-green-2{
+  background-color: #84A98C;
+}
+
+
+#gitLogo{
+  max-width: 30vh;
+}
+
+.hover-text-normal-green:hover{
+  color: #52796F;
 }
 
 .download-icon {
   background-image: url('./assets/icons/download-svgrepo-com.svg');
   background-position: left center;
   background-repeat: no-repeat;
-  padding-right: 25px;
+  padding-right: 15px;
+  margin-left: 5px;
+
 }
 
 .view-icon {
   background-image: url('./assets/icons/view-svgrepo-com.svg');
   background-position: left center;
   background-repeat: no-repeat;
-  padding-right: 25px;
+  padding-right: 15px;
+  margin-left: 5px;
+
 }
 
 .like-icon {
   background-image: url('./assets/icons/like-svgrepo-com.svg');
   background-position: left center;
   background-repeat: no-repeat;
-  padding-right: 25px;
+  padding-right: 15px;
+  margin-left: 5px;
 }
 
 
