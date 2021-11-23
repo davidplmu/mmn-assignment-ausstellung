@@ -1,58 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Bootstrap -->
-     <link rel="stylesheet" href="bootstrap-5/css/bootstrap.css">
-     <!-- Own CSS -->
-     <link href="ausstellung.css" rel="stylesheet" />
-     <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet" crossorigin="anonymous" />
- 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5/css/bootstrap.css">
+    <!-- Own CSS -->
+    <link href="ausstellung.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap" rel="stylesheet"
+        crossorigin="anonymous" />
+
     <title>Details</title>
 </head>
+
 <body>
     <!-- Dummy Element to make space for the header -->
-    <div style="height: 60px;"></div>
+    <div style="height: 56px;"></div>
 
     <!-- Header mit Navigations Elementen und Suchfeld -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark  ">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-green">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Fixed navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand" href="#">Your Favorite Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
                         <a class="nav-link" href="./ausstellung.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./detail-ansicht.html">Detail</a>
+                        <a class="nav-link" href="./detail-ansicht.html" >Detailansicht</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Link2</a>
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-color-1" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-    <h1>Hello World</h1>
+
+    <!-- Authors -->
+    <div class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+
+                    <h1>Current Authors</h1>
+                    <ul class="m-4">
+                        <li>
+                            <h3>David Penn</h3>
+                        </li>
+                    </ul>
 
 
+                </div>
+                <div class="d-flex align-items-center justify-content-between flex-column">
+                    <img class="img-fluid w-50 d-sm-block img-inv mb-3" id="gitLogo" src="assets/img/GitHub_logo.png"
+                        alt="" />
+                    <button class="btn btn-warning btn-lg mx-4" id="gitBtn"
+                        href="https://getbootstrap.com/docs/5.0/utilities/flex/">
+                        Github Repository
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-100"></div>
+
+    <!-- Footer - Section -->
+    <footer class="bottom">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
+                <ul class="nav col-md-4">
+                    <li class="nav-item">
+                        <div class="nav-link px-2 text-white">Autors:</div>
+                    </li>
+                    <li class="nav-item"><a href="../about.html" class="nav-link px-2 text-white">David Penn</a></li>
+                </ul>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="./ausstellung.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About this Project</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let gitBtn = document.getElementById('gitBtn');
+        gitBtn.addEventListener(('click'), () => {
+            window.location.href = 'https://github.com/davidplmu/mmn-assignment-ausstellung';
+        })
+    </script>
 
     <!-- Reqired for a Bootstrap-JS Interface -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
     <script src="bootstrap-5/js/bootstrap.js"></script>
-    
+
 </body>
+
 </html>
