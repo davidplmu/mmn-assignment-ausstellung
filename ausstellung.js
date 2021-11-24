@@ -2,7 +2,6 @@
 
 function loadCarouselImages(amountSlides = 4) {
     let carouselWrapper = document.getElementById('carousel-wrapper');
-    let carouselDescription = '';
     let textBox = document.getElementById('carousel-description');
 
     if (carouselWrapper) {
@@ -14,15 +13,21 @@ function loadCarouselImages(amountSlides = 4) {
             console.log(isFirst);
             carouselWrapper.appendChild(generateCarouselSlide(imageData, isFirst));
 
+
             //generates the according description
-            if (textBox) {
-                let carouselDescription = document.createElement('p');
-                carouselDescription.className = '';
-                carouselDescription.innerHTML = shortenText(imageData.description) + '<br>';
-                textBox.appendChild(carouselDescription);
-            } else {
-                console.error('carousel-description is not defined');
-            }
+            generateSlideDescription(imageData);
+        }
+    }
+
+    function generateSlideDescription(imageData) {
+        if (textBox) {
+            let carouselDescription = document.createElement('p');
+            carouselDescription.className = 'hover-text-normal-green';
+            carouselDescription.innerHTML = shortenText(imageData.description);
+            textBox.appendChild(carouselDescription);
+
+        } else {
+            console.error('carousel-description is not defined');
         }
     }
 }
