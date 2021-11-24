@@ -1,5 +1,3 @@
-
-
 function loadCarouselImages(amountSlides = 4) {
     let carouselWrapper = document.getElementById('carousel-wrapper');
     let textBox = document.getElementById('carousel-description');
@@ -10,7 +8,6 @@ function loadCarouselImages(amountSlides = 4) {
             //gets a random image and generates a slide
             let imageData = DATA[Math.floor(Math.random() * DATA.length)]
             let isFirst = i === 0;
-            console.log(isFirst);
             carouselWrapper.appendChild(generateCarouselSlide(imageData, isFirst));
 
 
@@ -60,12 +57,14 @@ function shortenText(text, desiredLength = 55) {
 }
 
 
+
+//-----------------------------------------------------------
 function generateImgCard(imageUrl, imgTitle, detailsLink, imgDescription) {
     let column = document.createElement('div');
     column.className = 'col';
 
     let card = document.createElement('div');
-    card.className = 'card shadow-sm';
+    card.className = 'card card-img-container shadow-sm';
 
     let img = document.createElement('img');
     img.className = 'card-img-top';
@@ -113,7 +112,6 @@ function renderAllCards() {
     let cardContainer = document.getElementById('card-container');
     if (cardContainer) {
         DATA.forEach((imgData) => {
-            console.log(imgData);
             renderCard(imgData, cardContainer);
         });
     } else {
@@ -125,11 +123,11 @@ function renderCard(imgData, cardContainer) {
     let imgTitle = shortenText(imgData.description.replace('\n', ''), 70);
     let imgDescription = parseImageDescription(imgData);
     let card = generateImgCard(imgData.image_urls.thumbnail, imgTitle, '', imgDescription);
-    
-    
-    card.querySelector('.btn').addEventListener(('click'), ()=>{
+
+
+    card.querySelector('.btn').addEventListener(('click'), () => {
         //saves the data in the local storage
-        localStorage.setItem("imgData",JSON.stringify(imgData));
+        localStorage.setItem("imgData", JSON.stringify(imgData));
         window.location.href = "./detail-ansicht.html";
     });
 
@@ -146,9 +144,9 @@ function parseImageDescription(data) {
     return shotOnMsg + expTimeMsg + likes + views + downloads;
 }
 
-
-
-
 loadCarouselImages(5);
-//renderAmountOfCards(5);
 renderAllCards();
+
+//-------------------------------------------------------------
+
+

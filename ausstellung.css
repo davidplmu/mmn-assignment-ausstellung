@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif !important;
+    position: relative;
 }
 
 
@@ -16,6 +17,11 @@ footer {
     
 }
 
+.navbar{
+  z-index: 9999 !important;  
+
+}
+
 
 
 /*
@@ -29,8 +35,8 @@ Adjusts the hight of the images to be consistent regardless of the resolution
     height: 50vh;
 }
 
-.card{
-    width: 18rem;
+.card-img-container{
+    min-width: 13rem;
     min-height: 310px;
     max-height: 65vh; 
 }
@@ -82,6 +88,12 @@ Adjusts the hight of the images to be consistent regardless of the resolution
 
 .img-inv{
   filter: invert();
+}
+
+.menu-panel {
+  position: fixed;
+  max-height: 20vh;
+  z-index: 9998 !important;  
 }
 
 

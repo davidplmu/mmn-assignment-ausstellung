@@ -22,62 +22,72 @@
 <body>
     <!-- Dummy Element to make space for the header -->
     <div style="height: 56px;"></div>
+    <div style="height: 170px;" class="collapse" id="navbarCollapseDummy"></div>
 
     <!-- Header mit Navigations Elementen und Suchfeld -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-green">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Your Favorite Gallery</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./ausstellung.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Detailansicht</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-color-1" type="submit">Search</button>
-                </form>
+    <div>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-green">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Your Favorite Gallery</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ausstellung.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Detailansicht</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <input class="" id="searchBar" type="text" value="" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Search Results -->
+        <div class="d-flex flex-row-reverse">
+            <div class="menu-panel " id="searchResults">
+
             </div>
         </div>
-    </nav>
+    </div>
 
-<!-- Main Section -->
-<div class="">
-    <div class="container my-3">
-        <div class="d-sm-flex align-items-center text-center justify-content-between">
-            <div class="row">
-                <div class="col-8 pt-2">
-                    <img src="" id="featured-image" class="img-fluid w-sm-100 w-lg-75" alt="LOADING...">
-                </div>
-                <div id="info-box" class="col-4">
-                    <h1 id="title"></h1>
-                    <p class="text-normal-green" id="date"></p>
-                    <h3 id="description"></h3>
-                    <p class="text-dark-green-2" id="metadata"></p>
+    <!-- Main Section -->
+    <div class="">
+        <div class="container my-3">
+            <div class="d-sm-flex align-items-center text-center justify-content-between">
+                <div class="row">
+                    <div class="col-8 pt-2">
+                        <img src="" id="featured-image" class="img-fluid w-sm-100 w-lg-75" alt="LOADING...">
+                    </div>
+                    <div id="info-box" class="col-4">
+                        <h1 id="title"></h1>
+                        <p class="text-normal-green" id="date"></p>
+                        <h3 id="description"></h3>
+                        <p class="text-dark-green-2" id="metadata"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Footer - Section -->
     <footer class="bottom">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
                 <ul class="nav col-md-4">
-                    <li class="nav-item"><div class="nav-link px-2 text-white">Autors:</div></li>
+                    <li class="nav-item">
+                        <div class="nav-link px-2 text-white">Autors:</div>
+                    </li>
                     <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-white">David Penn</a></li>
-                    
+
                 </ul>
 
                 <ul class="nav col-md-4 justify-content-end">
@@ -93,6 +103,8 @@
 
     <script src="./data.js"></script>
     <script src="./detail-ansicht.js"></script>
+    <script src="./searchBar.js"></script>
+
 
     <!-- Reqired for a Bootstrap-JS Interface -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
