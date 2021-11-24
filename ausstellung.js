@@ -79,7 +79,7 @@ function generateImgCard(imageUrl, imgTitle, detailsLink, imgDescription) {
     cardText.innerHTML = imgDescription;
 
     let cardBtn = document.createElement('a');
-    cardBtn.className = 'btn btn-primary';
+    cardBtn.className = 'btn btn-color-2';
     cardBtn.innerText = 'Detailansicht';
 
 

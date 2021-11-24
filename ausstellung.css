@@ -69,6 +69,17 @@ Adjusts the hight of the images to be consistent regardless of the resolution
   border-color: #146c43;
 }
 
+.btn-color-2{
+  color: #fff;
+  background-color: #354F52;
+  border-color: #354F52;
+}
+.btn-color-2:hover{
+  color: #fff;  
+  background-color: #2F3E46;
+  border-color: #2F3E46;
+}
+
 .img-inv{
   filter: invert();
 }
